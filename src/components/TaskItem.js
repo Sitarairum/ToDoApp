@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Button } from "react-native";
 
 const TaskItem = ({ task, onDelete, onComplete }) => {
   return (
@@ -11,9 +11,14 @@ const TaskItem = ({ task, onDelete, onComplete }) => {
           {task.text}
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => onDelete(task.id)}>
-        <Text style={styles.deleteButtonText}>Delete</Text>
-      </TouchableOpacity>
+
+      <Button
+        title="DEL"
+        onPress={() => onDelete(task.id)}
+        style={styles.deleteButtonText}
+        color="#800000"
+        marginBottom="10"
+      />
     </View>
   );
 };
@@ -34,11 +39,12 @@ const styles = StyleSheet.create({
   taskTextCompleted: {
     fontSize: 18,
     textDecorationLine: "line-through",
-    color: "#ccc",
+    color: "green",
   },
   deleteButtonText: {
     color: "red",
     fontSize: 16,
+    Bottom: 10,
   },
 });
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { View, FlatList, StyleSheet, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import TaskItem from "./src/components/TaskItem";
-import EmptyList from "./src/components/EmptyList";
-import TaskInput from "./src/components/TaskInput";
+import TaskItem from "./taskItem";
+import EmptyList from "./emptyList";
+import TaskInput from "./taskInput";
 
 const TodoScreen = () => {
   const [tasks, setTasks] = useState([]);
