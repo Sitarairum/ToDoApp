@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   emptyListText: {
-    fontSize: 18,
+    fontSize: 19,
     color: "#888",
   },
 });
